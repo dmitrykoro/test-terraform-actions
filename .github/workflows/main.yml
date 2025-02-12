@@ -17,11 +17,6 @@ jobs:
     if: ${{ github.event.inputs.action == 'Terraform_apply' || github.event.inputs.action == 'Terraform_destroy' }}
 
     steps:
-      # Define a reusable setup sequence using YAML anchors
-      - &setup
-        name: Setup
-        run: echo "Setting up repository, AWS credentials, and Terraform"
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
