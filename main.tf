@@ -19,7 +19,7 @@ resource "aws_instance" "my_server" {
      Name = "my ec2"
    }
 
-   #  user_data = file("wp_install.sh")
+   user_data = file("wp_install.sh")
 }
 resource "aws_eip" "lb" {
   domain   = "vpc"
